@@ -1,46 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Free Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Systems Engineering</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.6;
+            color: #1a1a1a;
+            max-width: 720px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fafafa;
+        }
+        header {
+            margin-bottom: 2.5rem;
+            border-bottom: 2px solid #000;
+            padding-bottom: 1rem;
+        }
+        h1 { margin: 0 0 5px 0; font-size: 1.8rem; }
+        .subtitle { font-size: 0.95rem; color: #555; font-weight: bold; margin-bottom: 1.5rem; }
+        
+        .philosophy-box {
+            background-color: #f0f0f0;
+            border-left: 3px solid #000;
+            padding: 15px 20px;
+            margin: 20px 0 30px 0;
+        }
+        .philosophy-title {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            color: #000;
+        }
+        .philosophy-box ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .philosophy-box li {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        .philosophy-box li:last-child { margin-bottom: 0; }
+        
+        .nav { margin-top: 15px; }
+        .nav a { color: #000; margin-right: 15px; text-decoration: underline; }
+        
+        h2 { font-size: 1.2rem; margin-top: 2.5rem; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+        
+        .project { margin-bottom: 1.8rem; }
+        .project-title { font-weight: bold; font-size: 1.05rem; color: #000; }
+        .project-meta { font-size: 0.82rem; color: #666; margin-bottom: 4px; }
+        .project-desc { margin: 0; font-size: 0.92rem; }
+        
+        footer { margin-top: 4rem; font-size: 0.8rem; color: #777; border-top: 1px solid #ccc; padding-top: 10px; }
+    </style>
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <p> # Paschal Ahanmisi
 
-> **Systems Engineer** · Low-Level Software, Microarchitecture, & High-Performance Infrastructure
+    <header>
+        <div class="subtitle">Systems Engineer · Low-Level Software, Microarchitecture, & High-Performance Infrastructure</div>
+        
+        <div class="nav">
+            <a href="https://github.com/paschalolo">GitHub</a>
+        </div>
 
-I build deterministic, high-throughput systems from first principles. My focus lies at the intersection of raw hardware and software execution: squeezing out maximum performance, eliminating operating system friction, and understanding the true cost of every cycle, cache miss, and instruction.
+        <div class="philosophy-box">
+            <div class="philosophy-title">Engineering Philosophy</div>
+            <ul>
+                <li><strong>Measure, Don't Guess:</strong> Optimization without profiling is just superstition. Microarchitectural bottlenecks—cache misses, branch mispredictions, pipeline stalls—dictate the design.</li>
+                <li><strong>Zero-Cost Abstractions (When Possible):</strong> If an abstraction introduces runtime overhead or hides the underlying hardware cost, discard it.</li>
+                <li><strong>First Principles:</strong> Relying on the standard library or OS primitives is a choice, not a requirement. True understanding comes from building the stack from the metal up.</li>
+            </ul>
+        </div>
+    </header>
 
----
+    <section>
+        <h2>Engineering Artifacts</h2>
+        
+        <div class="project">
+            <div class="project-title">Kernel-Bypass Storage Engine</div>
+            <div class="project-meta">C11 | Zero-Copy | Lock-Free</div>
+            <p class="project-desc">A custom, wait-free storage architecture designed to bypass kernel I/O friction and maximize PCIe throughput.</p>
+        </div>
 
-## 🛠️ Core Competencies & Technical Stack
+        <div class="project">
+            <div class="project-title">Custom Dynamic Linker & ELF Parser</div>
+            <div class="project-meta">C11 | x86_64</div>
+            <p class="project-desc">Engineered from first principles to resolve symbol tables, manage relocations, and execute dynamic binary loading without libc dependencies.</p>
+        </div>
 
-* **Languages:** C (C11/C23), C++ (Modern/Systems), Assembly (`x86_64`, `ARM64`)
-* **SIMD & Data-Parallelism:** AVX-512, AVX2, NEON
-* **Kernel-Bypass & Networking:** AF_XDP, User-Space PCIe Drivers
-* **Memory & Concurrency:** Lock-free/wait-free data structures, custom NUMA-aware memory allocators, cache-line optimization, memory ordering
-* **Systems Architecture:** Microarchitecture profiling, TLB/cache efficiency, profile-guided optimization (PGO), binary rewriting, custom ELF parsers/loaders
+        <div class="project">
+            <div class="project-title">NUMA-Aware Slab Allocator</div>
+            <div class="project-meta">C++ | Performance Tuning</div>
+            <p class="project-desc">A thread-local memory allocation engine optimized for NUMA-topology, effectively eliminating lock contention in high-concurrency workloads.</p>
+        </div>
 
----
+        <div class="project">
+            <div class="project-title">Profile-Guided Binary Optimizer</div>
+            <div class="project-meta">Systems Architecture</div>
+            <p class="project-desc">A binary rewriter that analyzes execution paths to restructure basic blocks, resulting in a 40% improvement in instruction cache efficiency.</p>
+        </div>
+        
+        <div class="project">
+            <div class="project-title">Async State Machine Library</div>
+            <div class="project-meta">C++ | Assembly | SIMD</div>
+            <p class="project-desc">A stack-based coroutine engine leveraging manual assembly control for ultra-lightweight asynchronous task scheduling.</p>
+        </div>
+    </section>
 
-## 🚀 Projects & Engineering Artifacts
+    <footer>
+        &copy; 2026 Paschalolo Built from first principles.
+    </footer>
 
-Rather than a traditional list of repositories, my complete body of work, technical write-ups, and systems projects are hosted and documented in a minimalist, self-contained format.
-
-👉 **[Explore My Complete Project Archive & Portfolio](https://paschalolo.github.io/)**
-
-Highlights of systems built from scratch (available on the archive above) include:
-* **Custom Dynamic Linker & ELF Parser:** Engineered entirely in C to resolve symbols, handle relocations, and load binaries from first principles.
-* **Production-Grade Slab Allocator:** A custom, thread-local cached, NUMA-aware memory allocation engine designed to bypass standard allocator lock contention.
-* **Profile-Guided Binary Layout Optimizer:** A optimization engine that restructures execution paths and basic blocks to yield massive performance gains.
-* **Kernel-Bypass Storage Engine:** Zero-copy storage architecture built to eliminate OS friction and maximize I/O throughput.
-
----
-
-## 🔬 Engineering Philosophy
-
-* **Measure, Don't Guess:** Optimization without profiling is just superstition. Microarchitectural bottlenecks—cache misses, branch mispredictions, pipeline stalls—dictate the design.
-* **Zero-Cost Abstractions (When Possible):** If an abstraction introduces runtime overhead or hides the underlying hardware cost, discard it.
-* **First Principles:** Relying on the standard library or OS primitives is a choice, not a requirement. True understanding comes from building the stack from the metal up.</p>
 </body>
 </html>
