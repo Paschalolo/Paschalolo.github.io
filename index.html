@@ -1,116 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paschalolo</title>
-    <style>
-        body {
-            font-family: monospace;
-            line-height: 1.5;
-            color: #000;
-            max-width: 750px;
-            margin: 30px auto;
-            padding: 20px;
-            background-color: #fff;
-        }
-        header {
-            margin-bottom: 2rem;
-            border-bottom: 1px solid #000;
-            padding-bottom: 1rem;
-        }
-        h1 { margin: 0 0 5px 0; font-size: 1.5rem; }
-        .subtitle { font-size: 0.9rem; margin-bottom: 1rem; }
-        
-        .philosophy-box {
-            margin: 15px 0 25px 0;
-            padding-left: 15px;
-            border-left: 2px solid #000;
-        }
-        .philosophy-title {
-            font-weight: bold;
-            font-size: 0.9rem;
-            margin-bottom: 8px;
-        }
-        .philosophy-box ul {
-            margin: 0;
-            padding-left: 15px;
-        }
-        .philosophy-box li {
-            margin-bottom: 8px;
-            font-size: 0.85rem;
-        }
-        
-        .nav { margin-top: 10px; font-size: 0.9rem; }
-        .nav a { color: #0000ee; text-decoration: underline; margin-right: 15px; }
-        
-        h2 { font-size: 1.1rem; margin-top: 2rem; text-transform: uppercase; border-bottom: 1px solid #ccc; padding-bottom: 3px; }
-        
-        .project { margin-bottom: 1.5rem; }
-        .project-title { font-weight: bold; font-size: 0.95rem; }
-        .project-meta { font-size: 0.8rem; color: #444; margin-bottom: 2px; }
-        .project-desc { margin: 0; font-size: 0.85rem; }
-        
-        footer { margin-top: 3rem; font-size: 0.8rem; color: #444; border-top: 1px solid #ccc; padding-top: 8px; }
-    </style>
+<meta charset="utf-8">
+<title>Paschalolo</title>
 </head>
 <body>
 
-    <header>
-        <div class="subtitle">Systems Engineer · Low-Level Software, Microarchitecture, & High-Performance Infrastructure</div>
-        
-        <div class="nav">
-            <a href="https://github.com/paschalolo">GitHub</a>
-            <a href="mailto:pastechnology1@gmail.com">Email</a>
-        </div>
 
-        <div class="philosophy-box">
-            <div class="philosophy-title">Engineering Philosophy</div>
-            <ul>
-                <li><strong>Measure, Don't Guess:</strong> Optimization without profiling is just superstition. Microarchitectural bottlenecks—cache misses, branch mispredictions, pipeline stalls—dictate the design.</li>
-                <li><strong>Zero-Cost Abstractions (When Possible):</strong> If an abstraction introduces runtime overhead or hides the underlying hardware cost, discard it.</li>
-                <li><strong>First Principles:</strong> Relying on the standard library or OS primitives is a choice, not a requirement. True understanding comes from building the stack from the metal up.</li>
-            </ul>
-        </div>
-    </header>
+<p>Systems Engineer &middot; Low-Level Software, Microarchitecture, & High-Performance Infrastructure</p>
 
-    <section>
-        <h2>Engineering Artifacts</h2>
-        
-        <div class="project">
-            <div class="project-title">Kernel-Bypass Storage Engine</div>
-            <div class="project-meta">C11 | Zero-Copy | Lock-Free</div>
-            <p class="project-desc">A custom, wait-free storage architecture designed to bypass kernel I/O friction and maximize PCIe throughput.</p>
-        </div>
+<p>
+<a href="https://github.com/paschalolo">GitHub</a> | 
+<a href="mailto:pastechnology1@gmail.com">Email</a>
+</p>
 
-        <div class="project">
-            <div class="project-title">Custom Dynamic Linker & ELF Parser</div>
-            <div class="project-meta">C11 | x86_64</div>
-            <p class="project-desc">Engineered from first principles to resolve symbol tables, manage relocations, and execute dynamic binary loading without libc dependencies.</p>
-        </div>
+<hr>
 
-        <div class="project">
-            <div class="project-title">NUMA-Aware Slab Allocator</div>
-            <div class="project-meta">C++ | Performance Tuning</div>
-            <p class="project-desc">A thread-local memory allocation engine optimized for NUMA-topology, effectively eliminating lock contention in high-concurrency workloads.</p>
-        </div>
+<h3>Engineering Philosophy</h3>
+<ul>
+    <li><strong>Measure, Don't Guess:</strong> Optimization without profiling is just superstition. Microarchitectural bottlenecks&mdash;cache misses, branch mispredictions, pipeline stalls&mdash;dictate the design.</li>
+    <li><strong>Zero-Cost Abstractions (When Possible):</strong> If an abstraction introduces runtime overhead or hides the underlying hardware cost, discard it.</li>
+    <li><strong>First Principles:</strong> Relying on the standard library or OS primitives is a choice, not a requirement. True understanding comes from building the stack from the metal up.</li>
+</ul>
 
-        <div class="project">
-            <div class="project-title">Profile-Guided Binary Optimizer</div>
-            <div class="project-meta">Systems Architecture</div>
-            <p class="project-desc">A binary rewriter that analyzes execution paths to restructure basic blocks, resulting in a 40% improvement in instruction cache efficiency.</p>
-        </div>
-        
-        <div class="project">
-            <div class="project-title">Async State Machine Library</div>
-            <div class="project-meta">C++ | Assembly | SIMD</div>
-            <p class="project-desc">A stack-based coroutine engine leveraging manual assembly control for ultra-lightweight asynchronous task scheduling.</p>
-        </div>
-    </section>
+<hr>
 
-    <footer>
-        &copy; 2026 Paschalolo
-    </footer>
+<h2>Engineering Artifacts</h2>
+
+<p>
+<strong>Kernel-Bypass Storage Engine</strong><br>
+<em>C11 | Zero-Copy | Lock-Free</em><br>
+A custom, wait-free storage architecture designed to bypass kernel I/O friction and maximize PCIe throughput.
+</p>
+
+<p>
+<strong>Custom Dynamic Linker & ELF Parser</strong><br>
+<em>C11 | x86_64</em><br>
+Engineered from first principles to resolve symbol tables, manage relocations, and execute dynamic binary loading without libc dependencies.
+</p>
+
+<p>
+<strong>NUMA-Aware Slab Allocator</strong><br>
+<em>C++ | Performance Tuning</em><br>
+A thread-local memory allocation engine optimized for NUMA-topology, effectively eliminating lock contention in high-concurrency workloads.
+</p>
+
+<p>
+<strong>Profile-Guided Binary Optimizer</strong><br>
+<em>Systems Architecture</em><br>
+A binary rewriter that analyzes execution paths to restructure basic blocks, resulting in a 40% improvement in instruction cache efficiency.
+</p>
+
+<p>
+<strong>Async State Machine Library</strong><br>
+<em>C++ | Assembly | SIMD</em><br>
+A stack-based coroutine engine leveraging manual assembly control for ultra-lightweight asynchronous task scheduling.
+</p>
+
+<hr>
+<p>&copy; 2026 Paschalolo</p>
 
 </body>
 </html>
